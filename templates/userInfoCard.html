@@ -1,0 +1,23 @@
+<div class="panel panel-primary">
+    <div class="panel panel-heading">
+        {{ vm.user.name }}
+    </div>
+    <div class="panel panel-body">
+      <div ng-show="vm.user.address"> Address:
+        <br/> Street: {{vm.user.address.street}}
+         <br/> City: {{vm.user.address.city}}
+         <br/> Planet: {{vm.user.address.planet}}
+
+        <div>  Friends
+          <div ng-repeat="friend in vm.user.friends">
+             {{friend}}
+          </div>
+        </div>
+    </div>
+</div>
+
+<h5 ng-show="vm.user">  </h5>
+
+<!-- <pre> {{ vm.user | json }}</pre> -->
+
+<!-- <pre>{{ user | json  }}</pre> -->

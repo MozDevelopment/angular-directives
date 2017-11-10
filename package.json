@@ -1,0 +1,32 @@
+{
+  "name": "mocambola",
+  "version": "1.0.0",
+  "description": "App to manage mozambique soccer league schedule",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.16.1",
+    "compression": "^1.6.2",
+    "express": "^4.14.1",
+    "jade": "^1.11.0",
+    "morgan": "^1.8.1",
+    "serve-favicon": "^2.4.0",
+    "serve-static": "^1.11.2"
+  },
+  "devDependencies": {
+    "connect": "^3.6.0",
+    "connect-livereload": "^0.6.0",
+    "cors": "^2.8.1",
+    "debug": "^2.6.1",
+    "del": "^2.2.2",
+    "jshint": "^2.9.4",
+    "jshint-stylish": "^2.2.1",
+    "opn": "^4.0.2",
+    "wiredep": "^4.0.0",
+    "yargs": "^6.6.0"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "author": "larslemos",
+  "license": "ISC"
+}
