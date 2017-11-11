@@ -22,7 +22,10 @@
                   $scope.removing = false;
                 }
                 $scope.confirmRemove = function() {
-                  $scope.notifyParent();
+                  // $scope.notifyParent();
+
+                  //Override paramaters
+                  $scope.notifyParent({friend: 'Mauro'})
                 }
               }
           }//userRemoveCard

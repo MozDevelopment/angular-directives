@@ -9,7 +9,7 @@
         var vm = this;
         // console.log(vm);
         console.info($scope);
-        
+
         vm.user1 = {
           scope: 'vm',
           name: 'Lars Albino Lemos',
@@ -19,7 +19,7 @@
             planet: 'Earth'
           },
           friends: [
-            'Eugenio', 'Ivan', 'Eudson'
+            'Eugenio', 'Ivan', 'Eudson', 'Mauro'
           ]
         };
         vm.user2 = {
