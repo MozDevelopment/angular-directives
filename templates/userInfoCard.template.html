@@ -9,14 +9,13 @@
          <br/> Planet: {{vm.user.address.planet}}
 
         <div>  Friends
-          <div ng-repeat="friend in vm.user.friends">
-             {{friend}}
-          </div>
+          <ul>
+            <li ng-repeat="friend in vm.user.friends">
+               {{friend}}
+            </li>
+          </ul>
         </div>
+        <div ng-show="vm.user.rank"> Rank: {{ vm.user.rank }} </div>
+        <button ng-show="!vm.user.rank" class="btn btn-succes" ng-click="vm.promoteMe(user)">Promote Me</button>
     </div>
 </div>
- 
-
-<!-- <pre> {{ vm.user | json }}</pre> -->
-
-<!-- <pre>{{ user | json  }}</pre> -->

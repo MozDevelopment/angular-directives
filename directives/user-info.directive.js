@@ -10,7 +10,8 @@
       console.log(this);
         return {
           restrict: 'EA',
-          templateUrl: 'templates/userInfoCard.html'
+          // templateUrl: 'templates/userInfoCard.html'
+          templateUrl: 'templates/userInfoCard.template.html'
         }
     }//UserInfoCard
 

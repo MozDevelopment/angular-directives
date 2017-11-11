@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="directives">
+  <head>
+    <meta charset="utf-8">
+    <title>  Angular Directives </title>
+      <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
+      <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"> </script>
+      <script type="text/javascript" src="bower_components/angular/angular.js"> </script>
+      <script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+  </head>
+  <body class="container">
+      <div ng-controller="DirectivesController as vm">
+          <div ng-include="headerUrl"> </div>
+            <div class=""> Your current locale: {{ locale }} </div>
+
+
+      <video id="vid" spacebar-support controls preload="none" poster="http://media.w3.org/2010/05/sintel/poster.png">
+      <source src="http://media.w3.org/2010/05/sintel/trailer.mp4" type="video/mp4"></source>
+      <source src="http://media.w3.org/2010/05/sintel/trailer.webm5" type="video/webm"></source>
+      <source src="http://media.w3.org/2010/05/sintel/trailer.ogv" type="video/ogg"></source>
+
+      <!-- module -->
+      <script type="text/javascript" src="modules/directives.module.js"> </script>
+
+      <!-- controller -->
+      <script type="text/javascript" src="controllers/directives.controller.js"> </script>
+
+      <!-- directives -->
+      <script type="text/javascript" src="directives/spacebar.directive.js"> </script>
+
+
+
+  </body>
+</html>

@@ -1,8 +1,10 @@
 var express = require('express');
+var path = require('path');
 
 var app = express();
 
-app.use('/', express.static('./'));
+// app.use('/', express.static('./'));
+app.use(express.static(path.resolve('./')));
 
 // app.use('/controllers', express.static('/'));
 // app.use('/bower_components',  express.static( '/'));

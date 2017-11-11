@@ -4,22 +4,48 @@
     <meta charset="utf-8">
     <title>  Angular Directives </title>
       <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
-
+    <link rel="stylesheet" href="styles/styles.css" />
       <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"> </script>
       <script type="text/javascript" src="bower_components/angular/angular.js"> </script>
+      <script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
   </head>
   <body class="container">
       <div ng-controller="DirectivesController as vm">
           <div ng-include="headerUrl"> </div>
             <div class=""> Your current locale: {{ locale }} </div>
- 
-          <div user-info-card>   </div>
+
           <div class="row-fluid" ng-repeat="url in vm.list">
                   <div class="span1"> </div>
                   <div class="span11"><a ng-click="vm.go(url)" href=""> {{ url }}</a> </div>
           </div>
 
-        </div>
+          <!-- <div ui-view ></div> -->
+
+          <!-- Simple Card -->
+          <!-- <div user-info-card> </div> -->
+
+          <!-- Card with Controller -->
+          <!-- <div user-info-card-controller> </div> -->
+
+          <!-- Card with Inherited $scope Controller -->
+          <!-- <div user-info-card-inheritance-controller> </div> -->
+
+          <!-- Card with Isolated $scope Controller -->
+          <!-- <div> <user-info-card-isolated-controller user="vm.user1" collapsed="true">
+                 <user-info-card-isolated-controller/>
+           </div>
+          <user-info-card-isolated-controller user="vm.user2">  <user-info-card-isolated-controller/> -->
+
+          <!-- Card with Inherited $scope Controller methods and parameters -->
+          <!-- <div> <user-info-card-isolated-controller user="vm.user1" collapsed="true">
+                 <user-info-card-isolated-controller/>
+           </div>
+              <user-info-card-isolated-controller user="vm.user2">  <user-info-card-isolated-controller/>
+          </div> -->
+
+          <!-- Card with Isolated $scope controller method and remove friend  -->
+          <user-remove-card user="vm.user1" collapsed="true"> </user-remove-card>
+          <user-remove-card user="vm.user2" > </user-remove-card>
 
       <!-- module -->
       <script type="text/javascript" src="modules/directives.module.js"> </script>
@@ -28,7 +54,13 @@
       <script type="text/javascript" src="controllers/directives.controller.js"> </script>
 
       <!-- directives -->
+      <script type="text/javascript" src="directives/address.directive.js"> </script>
+      <script type="text/javascript" src="directives/removeFriend.directive.js"> </script>
       <script type="text/javascript" src="directives/user-info.directive.js"> </script>
+      <script type="text/javascript" src="directives/userinfocard.directive.js"> </script>
+      <script type="text/javascript" src="directives/userRemoveCard.directive.js"> </script>
+
+
 
   </body>
 </html>

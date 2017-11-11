@@ -1,0 +1,21 @@
+<div class="panel panel-primary">
+    <div class="panel panel-heading" ng-click="collapse()">
+        {{ user.name }}
+    </div>
+    <div class="panel panel-body" ng-hide="collapsed">
+        <address>  </address>
+        <div><b> Friends </b>
+          <ul>
+            <li ng-repeat="friend in  user.friends">
+               {{friend}}
+
+              <!-- Improve the chain of responsibilities -->
+              <remove-friend method="removeFriend(friend)"></remove-friend>
+
+            </li>
+          </ul>
+        </div>
+        <div ng-show="user.rank"> <b>Rank:</b> {{ user.rank }} </div>
+        <button ng-show="!user.rank" class="btn btn-succes" ng-click="promoteMeI(user)">Promote Me</button>
+    </div>
+</div>
