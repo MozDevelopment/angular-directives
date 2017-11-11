@@ -8,12 +8,16 @@
           <ul>
             <li ng-repeat="friend in  user.friends">
                {{friend}}
-               <span ng-hide="removing"class="glyphicon glyphicon-remove remove-button" ng-click="startRemoving()">
+
+              <!-- //Implementation with directive -->
+              <!-- <span ng-hide="removing"class="glyphicon glyphicon-remove remove-button" ng-click="startRemoving()">
               </span>
-               <span ng-show="removing">
+              <span ng-show="removing">
                  <button class="btn btn-xs btn-success" ng-click="removeFriend(friend)">Remove</button>
                  <button class="btn btn-xs btn-warning" ng-click="cancel()">Cancel</button>
-               </span>
+              </span> -->
+              <remove-friend ></remove-friend>
+              
             </li>
           </ul>
         </div>

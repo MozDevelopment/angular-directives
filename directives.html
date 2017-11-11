@@ -14,8 +14,6 @@
           <div ng-include="headerUrl"> </div>
             <div class=""> Your current locale: {{ locale }} </div>
 
-
-
           <div class="row-fluid" ng-repeat="url in vm.list">
                   <div class="span1"> </div>
                   <div class="span11"><a ng-click="vm.go(url)" href=""> {{ url }}</a> </div>
@@ -39,11 +37,15 @@
           <user-info-card-isolated-controller user="vm.user2">  <user-info-card-isolated-controller/> -->
 
           <!-- Card with Inherited $scope Controller methods and parameters -->
-          <div> <user-info-card-isolated-controller user="vm.user1" collapsed="true">
+          <!-- <div> <user-info-card-isolated-controller user="vm.user1" collapsed="true">
                  <user-info-card-isolated-controller/>
            </div>
-          <user-info-card-isolated-controller user="vm.user2">  <user-info-card-isolated-controller/>
-        </div>
+              <user-info-card-isolated-controller user="vm.user2">  <user-info-card-isolated-controller/>
+          </div> -->
+
+          <!-- Card with Isolated $scope controller method and remove friend  -->
+          <user-remove-card user="vm.user1" collapsed="true"> </user-remove-card>
+          <user-remove-card user="vm.user2" > </user-remove-card>
 
       <!-- module -->
       <script type="text/javascript" src="modules/directives.module.js"> </script>
@@ -53,8 +55,12 @@
 
       <!-- directives -->
       <script type="text/javascript" src="directives/address.directive.js"> </script>
+      <script type="text/javascript" src="directives/removeFriend.directive.js"> </script>
       <script type="text/javascript" src="directives/user-info.directive.js"> </script>
       <script type="text/javascript" src="directives/userinfocard.directive.js"> </script>
+      <script type="text/javascript" src="directives/userRemoveCard.directive.js"> </script>
+
+
 
   </body>
 </html>
