@@ -10,24 +10,30 @@
       <script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
   </head>
   <body class="container">
-      <div ng-controller="DirectivesController as vm">
+      <div ng-controller="DecoratorController as vm">
           <div ng-include="headerUrl"> </div>
             <div class=""> Your current locale: {{ locale }} </div>
 
 
-      <video id="vid" spacebar-support controls preload="none" poster="http://media.w3.org/2010/05/sintel/poster.png">
-      <source src="http://media.w3.org/2010/05/sintel/trailer.mp4" type="video/mp4"></source>
-      <source src="http://media.w3.org/2010/05/sintel/trailer.webm5" type="video/webm"></source>
-      <source src="http://media.w3.org/2010/05/sintel/trailer.ogv" type="video/ogg"></source>
+      <video id="vid" spacebar-support event-pause="vm.handlePause()" controls preload="none"
+             poster="http://media.w3.org/2010/05/sintel/poster.png" />
+        <source src="http://media.w3.org/2010/05/sintel/trailer.mp4" type="video/mp4"></source>
+        <source src="http://media.w3.org/2010/05/sintel/trailer.webm5" type="video/webm"></source>
+        <source src="http://media.w3.org/2010/05/sintel/trailer.ogv" type="video/ogg"></source>
+      </video>
 
+        <div ng-repeat="message in vm.messages">
+            <b> {{ message.text }}</b>
+        </div> 
       <!-- module -->
       <script type="text/javascript" src="modules/directives.module.js"> </script>
 
       <!-- controller -->
-      <script type="text/javascript" src="controllers/directives.controller.js"> </script>
+      <script type="text/javascript" src="controllers/decoratorDirective.controller.js"> </script>
 
       <!-- directives -->
       <script type="text/javascript" src="directives/spacebar.directive.js"> </script>
+      <script type="text/javascript" src="directives/event-pause.directive.js"> </script>
 
 
 
