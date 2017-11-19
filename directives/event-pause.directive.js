@@ -4,7 +4,9 @@
     angular.module('directives')
             .directive('eventPause', eventPause);
 
-    function eventPause() {
+    eventPause.$inject = ['$parse'];
+
+    function eventPause($parse) {
       return {
         restrict: 'A',
         scope: {
@@ -13,11 +15,14 @@
         link: eventLink
       }
 
-      function eventLink(scope, el, attrs) {
+      function eventLink(scope, el, attrs) { 
+        console.info(attrs);
+        var fnPause = $parse(attrs['eventPause']);
+        console.info(fnPause);
         el.on('pause', function(event) {
           scope.$apply(function() {
               scope.eventPause();
-              console.log(scope)
+              fnPause(scope, {evt: event });
           });
         });
       }

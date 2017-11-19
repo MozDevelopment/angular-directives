@@ -15,7 +15,7 @@
             <div class=""> Your current locale: {{ locale }} </div>
 
 
-      <video id="vid" spacebar-support event-pause="vm.handlePause()" controls preload="none"
+      <video id="vid" spacebar-support event-pause="vm.handlePause(event)" controls preload="none"
              poster="http://media.w3.org/2010/05/sintel/poster.png" />
         <source src="http://media.w3.org/2010/05/sintel/trailer.mp4" type="video/mp4"></source>
         <source src="http://media.w3.org/2010/05/sintel/trailer.webm5" type="video/webm"></source>
@@ -24,7 +24,7 @@
 
         <div ng-repeat="message in vm.messages">
             <b> {{ message.text }}</b>
-        </div> 
+        </div>
       <!-- module -->
       <script type="text/javascript" src="modules/directives.module.js"> </script>
 
