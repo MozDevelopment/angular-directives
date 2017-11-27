@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="directives">
+  <head>
+    <meta charset="utf-8">
+    <title>  Angular Directives </title>
+      <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
+      <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"> </script>
+      <script type="text/javascript" src="bower_components/angular/angular.js"> </script>
+      <script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+  </head>
+  <body class="container">
+      <div class="well" ng-controller="DecoratorController as vm" my-click="vm.clickHandler(vm.data)">
+          <div ng-include="headerUrl"> </div>
+            <div class=""> Your current locale: {{ locale }} </div>
+
+
+            <h2> {{vm.data.message}} </h2>
+
+            <!-- <my-click> </my-click> -->
+
+        </div>
+      <!-- module -->
+      <script type="text/javascript" src="modules/directives.module.js"> </script>
+
+      <!-- controller -->
+      <script type="text/javascript" src="controllers/decoratorDirective.controller.js"> </script>
+
+      <!-- directives -->
+      <script type="text/javascript" src="directives/ngclick.directive.js"> </script>
+
+
+
+  </body>
+</html>

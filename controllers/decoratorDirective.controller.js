@@ -18,6 +18,12 @@
             vm.messages.push({text: 'paused!'});
         }
 
+        //
+        vm.data = {message: 'I have not been clicked'};
+        vm.clickHandler = function(para) {
+          para.message = 'I have been clicked';
+        };
+
 
 
     }//DecoratorController
