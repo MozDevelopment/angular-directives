@@ -24,6 +24,8 @@
           para.message = 'I have been clicked';
         };
 
+        vm.size = 150;
+
 
 
     }//DecoratorController

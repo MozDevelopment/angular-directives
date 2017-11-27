@@ -9,17 +9,20 @@
       <script type="text/javascript" src="bower_components/angular/angular.js"> </script>
       <script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
   </head>
-  <body class="container">
-      <div class="well" ng-controller="DecoratorController as vm" my-click="vm.clickHandler(vm.data)">
-          <div ng-include="headerUrl"> </div>
-            <div class=""> Your current locale: {{ locale }} </div>
+  <body class="container"  ng-controller="DecoratorController as vm">
+      <div class="well" my-click="vm.clickHandler(vm.data)">
+          <h2> {{vm.data.message}} </h2>
+      </div>
+
+      <div class="well">
+        <h3> Unscaled Text </h3>
+        <div font-scale="vm.size"> I'm Scaled </div>
+        <input ng-model="vm.size">
+      </div>
+
+      <pre>{{ vm | json }}</pre>
 
 
-            <h2> {{vm.data.message}} </h2>
-
-            <!-- <my-click> </my-click> -->
-
-        </div>
       <!-- module -->
       <script type="text/javascript" src="modules/directives.module.js"> </script>
 
@@ -28,8 +31,6 @@
 
       <!-- directives -->
       <script type="text/javascript" src="directives/ngclick.directive.js"> </script>
-
-
-
-  </body>
+      <script type="text/javascript" src="directives/fontScale.directive.js"> </script>
+ </body>
 </html>
