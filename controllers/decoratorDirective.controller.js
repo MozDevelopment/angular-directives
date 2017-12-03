@@ -5,10 +5,11 @@
                       .controller('DecoratorController', DecoratorController);
 
     DecoratorController.$inject = ['$scope','$window','$locale'];
+
     function DecoratorController($scope, $window, $locale) {
         var vm = this;
         // console.log(vm);
-        console.info($scope);
+        // console.info($scope);
 
         vm.messages = [];
 
@@ -18,7 +19,6 @@
             vm.messages.push({text: 'paused!'});
         }
 
-        //
         vm.data = {message: 'I have not been clicked'};
         vm.clickHandler = function(para) {
           para.message = 'I have been clicked';
@@ -26,7 +26,10 @@
 
         vm.size = 150;
 
-
+        vm.user = {
+          name: 'Junior',
+          selected: false
+        };
 
     }//DecoratorController
 

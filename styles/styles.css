@@ -15,3 +15,7 @@ body {
 .div {
   /*padding: 20px 20px;*/
 }
+
+.highlight {
+  color: red;
+}
