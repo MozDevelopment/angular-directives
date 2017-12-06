@@ -1,3 +1,7 @@
+body {
+  padding: 5px 5px;
+}
+
 .card {
   padding: 10px 10px;
   width: 10px;
@@ -6,4 +10,12 @@
 
 .remove-button {
   cursor: pointer;
+}
+
+.div {
+  /*padding: 20px 20px;*/
+}
+
+.highlight {
+  color: red;
 }

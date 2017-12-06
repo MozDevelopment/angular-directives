@@ -11,8 +11,7 @@
       }
 
       function spaceBarLink(scope, el, attrs) {
-        $('body').on('keypress', function(event) {
-          console.log(event);
+        $('body').on('keypress', function(event) { 
           if(event.keyCode === 32) {
             var vidEl = el[0];
             if(vidEl.paused) {

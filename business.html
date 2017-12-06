@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="directives">
+  <head>
+    <meta charset="utf-8">
+    <title>  Busines Specific  </title>
+      <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
+      <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"> </script>
+      <script type="text/javascript" src="bower_components/angular/angular.js"> </script>
+      <script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+  </head>
+
+  <body class="container"  >
+      <div ng-controller="DecoratorController as vm">
+        <user-tile user="vm.user" >   </user-tile>
+
+        <pre>{{ vm | json }}</pre>
+      </div>
+      <!-- module -->
+      <script type="text/javascript" src="modules/directives.module.js"> </script>
+
+      <!-- controller -->
+      <script type="text/javascript" src="controllers/decoratorDirective.controller.js"> </script>
+
+      <!-- directives -->
+      <script type="text/javascript" src="directives/business.directive.js"> </script>
+      <script type="text/javascript" src="directives/userClick.directive.js"> </script>
+
+ </body>
+</html>

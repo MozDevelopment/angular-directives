@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="directives">
+  <head>
+    <meta charset="utf-8">
+    <title>  Angular Directives </title>
+      <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
+      <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"> </script>
+      <script type="text/javascript" src="bower_components/angular/angular.js"> </script>
+      <script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+  </head>
+  <body class="container"  ng-controller="DecoratorController as vm">
+      <div class="well" my-click="vm.clickHandler(vm.data)">
+          <h2> {{vm.data.message}} </h2>
+      </div>
+
+      <div class="well">
+        <h3> Unscaled Text </h3>
+        <div font-scale="vm.size"> I'm Scaled </div>
+        <input ng-model="vm.size">
+      </div>
+
+      <pre>{{ vm | json }}</pre>
+
+
+      <!-- module -->
+      <script type="text/javascript" src="modules/directives.module.js"> </script>
+
+      <!-- controller -->
+      <script type="text/javascript" src="controllers/decoratorDirective.controller.js"> </script>
+
+      <!-- directives -->
+      <script type="text/javascript" src="directives/ngclick.directive.js"> </script>
+      <script type="text/javascript" src="directives/fontScale.directive.js"> </script>
+ </body>
+</html>
