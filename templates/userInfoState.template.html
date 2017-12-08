@@ -1,6 +1,19 @@
-<div class="panel panel-primary">
-    <div class="panel-heading"> </div>
+ <div class="panel panel-primary">
+    <div class="panel-heading"> {{ user.name }} </div>
     <div class="panel-body">
-      
+        <address> </address>
+
+        <h4> Friends: </h4>
+        <ul>
+            <li ng-repeat="friend in user.friends">
+                {{friend}}
+                <remove-friend method="removeFriend(friend)"></remove-friend>
+            </li>
+        </ul>
+        <div ng-show="!!user.rank">
+            Rank: {{user.rank}}
+        </div>
+        <button class="btn btn-success" ng-show="!user.rank" ng-click="promoteMeI(user)"> Rank </button>
+        <button class="btn btn-primary" ng-click="nextLevel()"> Next Level </button>
     </div>
 </div>

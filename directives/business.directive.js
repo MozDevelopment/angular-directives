@@ -2,24 +2,19 @@
     'use strict';
 
     angular.module('directives')
-          .directive('userTile', userTile);
+          .directive('userState', userState);
 
-          function userTile() {
+          function userState() {
             return {
               restrict: 'E',
               scope: {
                 user: '='
               },
-              templateUrl: 'templates/userTile.html',
+              templateUrl: 'templates/userInfoState.template.html',
               controller: userTile
             }
 
-            function userTile($scope) {  
-              $scope.selectTile = function() {
-                  $scope.user.selected = !$scope.user.selected;
-              }
-            }// userInteraction
-
-
+            function userTile($scope) { 
           }//userTile
+        }
 })();
