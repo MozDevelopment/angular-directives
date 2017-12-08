@@ -4,7 +4,7 @@
     angular.module('directives')
           .directive('userTile', userTile)
           .directive('userState', userState)
-          ,directive('stateDisplay', stateDisplay);
+          .directive('stateDisplay', stateDisplay);
 
           function userTile() {
             return {
@@ -31,26 +31,26 @@
             templateUrl: 'templates/userInfoState.template.html',
             controller: userStateC,
             link: function(scope, el, attrs) {
-                scope.nextLevel = function() {
-                  var vm = this;
-                  vm.user.level++;
-                  vm.user.level = vm.user.level % 3;
-                  setState(vm.user);
-                  }
-                  function setState(user) {
-                    switch (user.level) {
-                      case 0:
-                        el.find('.panel-heading').css('background-color', 'grey');
-                        break;
-                      case 1:
-                        el.find('.panel-heading').css('background-color', 'orange');
-                        break;
-                      case 2:
-                        el.find('.panel-heading').css('background-color', 'red');
-                        break;
-                    }
-                }
-                setState(scope.user);
+            //     scope.nextLevel = function() {
+            //       var vm = this;
+            //       vm.user.level++;
+            //       vm.user.level = vm.user.level % 3;
+            //       setState(vm.user);
+            //       }
+            //       // function setState(user) {
+            //       //   switch (user.level) {
+            //       //     case 0:
+            //       //       el.find('.panel-heading').css('background-color', 'grey');
+            //       //       break;
+            //       //     case 1:
+            //       //       el.find('.panel-heading').css('background-color', 'orange');
+            //       //       break;
+            //       //     case 2:
+            //       //       el.find('.panel-heading').css('background-color', 'red');
+            //       //       break;
+            //       //   }
+            //     }
+            //     setState(scope.user);
             }
           }
 
@@ -63,7 +63,31 @@
               if(index > -1)
                 $scope.user.friends.splice(index);
             }
+            $scope.nextLevel = function() {
+              $scope.user.level++;
+              $scope.user.leve = $scope.user.level % 3;
+
+            }
           }//userStateC
         }//userState
 
+        function stateDisplay() {
+            return {
+              link: function(scope, el, attrs) {
+                scope.$watch(attrs['stateDisplay'], function(newValue) { 
+                    switch (newValue) {
+                      case 0:
+                        el.css('background-color', 'grey');
+                        break;
+                      case 1:
+                        el.css('background-color', 'orange');
+                        break;
+                      case 2:
+                        el.css('background-color', 'red');
+                        break;
+                    }
+                });
+              }
+            }
+        }//stateDisplay
 })();
