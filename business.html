@@ -11,20 +11,29 @@
   </head>
 
   <body class="container"  >
-      <div ng-controller="DecoratorController as vm">
-        <user-tile user="vm.user" >   </user-tile>
+      <div ng-controller="BussinessController as vm">
+
+        <user-tile user="vm.user"> </user-tile>
+
+        <user-state user="vm.user">  </user-state>
 
         <pre>{{ vm | json }}</pre>
+
       </div>
+
       <!-- module -->
       <script type="text/javascript" src="modules/directives.module.js"> </script>
 
       <!-- controller -->
-      <script type="text/javascript" src="controllers/decoratorDirective.controller.js"> </script>
+      <script type="text/javascript" src="controllers/business.controller.js"> </script>
 
       <!-- directives -->
-      <script type="text/javascript" src="directives/business.directive.js"> </script>
+      <!-- <script type="text/javascript" src="directives/business.directive.js"> </script> -->
+      <script type="text/javascript" src="directives/userState.directive.js"> </script>
+      <script type="text/javascript" src="directives/address.directive.js"> </script>
+      <script type="text/javascript" src="directives/removeFriend.directive.js"> </script>
       <script type="text/javascript" src="directives/userClick.directive.js"> </script>
 
  </body>
+
 </html>

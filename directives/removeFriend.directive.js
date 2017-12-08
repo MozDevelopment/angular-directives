@@ -13,7 +13,7 @@
                   notifyParent: '&method'
                 }
               }
-              function removeController($scope) {
+              function removeController($scope) { 
                 $scope.removing = false;
                 $scope.startRemoving = function() {
                   $scope.removing = true;
@@ -25,7 +25,7 @@
                   // $scope.notifyParent();
 
                   //Override paramaters
-                  $scope.notifyParent({friend: 'Mauro'})
+                  $scope.notifyParent({friend: 'Mauro'});
                 }
               }
           }//userRemoveCard
